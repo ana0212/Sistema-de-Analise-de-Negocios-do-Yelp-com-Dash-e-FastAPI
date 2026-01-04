@@ -1,0 +1,15 @@
+# Ambientes virtuais
+venv/
+.env/
+.dashboard/venv/
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# SO / IDE
+.DS_Store
+.vscode/
