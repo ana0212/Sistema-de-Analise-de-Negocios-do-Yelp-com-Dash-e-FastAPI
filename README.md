@@ -76,22 +76,27 @@ Os estabelecimentos foram segmentados com base em:
 ### 1. Backend (API)
 ```bash
 uvicorn backend.backend:app --reload
+```
 
 ### 2. Dashboard
+```bash
 python dashboard/app.py
+```
 
 A aplicação ficará disponível localmente no navegador.
 
 ## Endpoints da API
-
+```bash
 POST /predict/sentiment
 
 POST /predict/cluster
+```
 
 ## Observações sobre os Dados
 
 Os datasets completos não estão versionados no repositório devido a limitações de tamanho.
 O projeto utiliza versões processadas e modelos previamente treinados para inferência.
+
 
 
 
