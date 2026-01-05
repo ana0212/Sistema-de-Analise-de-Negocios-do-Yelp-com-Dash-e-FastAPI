@@ -4,6 +4,9 @@ import dash_bootstrap_components as dbc
 from dash import html, dcc
 import requests
 from dash.dependencies import Input, Output, State
+import os
+
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
 
 dash.register_page(
     __name__,
@@ -70,7 +73,7 @@ def predict_sentiment(n_clicks, text):
         return dbc.Alert("Digite um texto para análise.", color="warning")
 
     response = requests.post(
-        API_URL = os.getenv("API_URL", "http://127.0.0.1:8000/predict/sentiment"),
+        f"{API_URL}/predict/sentiment",
         json={"text": text}
     )
 
@@ -107,7 +110,7 @@ def predict_cluster(n_clicks, avg_stars, n_reviews):
         return dbc.Alert("Preencha todos os campos.", color="warning")
 
     response = requests.post(
-        API_URL = os.getenv("API_URL", "http://127.0.0.1:8000/predict/cluster"),
+        f"{API_URL}/predict/cluster",
         json={
             "avg_stars": avg_stars,
             "review_count": n_reviews
