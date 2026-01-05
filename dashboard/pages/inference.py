@@ -77,6 +77,7 @@ def predict_sentiment(n_clicks, text):
         json={"text": text}
     )
 
+
     if response.status_code != 200:
         return dbc.Alert("Erro ao consultar o modelo.", color="danger")
 
@@ -115,7 +116,7 @@ def predict_cluster(n_clicks, avg_stars, n_reviews):
             "avg_stars": avg_stars,
             "review_count": n_reviews
         }
-    )
+)
 
     if response.status_code != 200:
         return dbc.Alert("Erro ao consultar o cluster.", color="danger")
@@ -132,8 +133,3 @@ def predict_cluster(n_clicks, avg_stars, n_reviews):
             html.P(f"Nº de negócios: {info.get('n_businesses')}")
         ])
     ])
-
-response = requests.post(
-    f"{API_URL}/predict/sentiment",
-    json={"text": text}
-)
