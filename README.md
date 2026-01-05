@@ -19,6 +19,9 @@ O sistema é dividido em três camadas principais:
 - **Backend (FastAPI)**: disponibiliza os modelos treinados via endpoints REST
 - **Dashboard (Dash)**: interface interativa para visualização e inferência
 
+## Demonstração
+- [Acesse o app online](https://yelp-dashboard.onrender.com/)
+
 ## Resultados Principais
 
 ### Classificação de Sentimento
@@ -96,6 +99,7 @@ POST /predict/cluster
 
 Os datasets completos não estão versionados no repositório devido a limitações de tamanho.
 O projeto utiliza versões processadas e modelos previamente treinados para inferência.
+
 
 
 
